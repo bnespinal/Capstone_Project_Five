@@ -8,7 +8,7 @@ Dependencies: This project depends on data tables created in phpmyadmin, and the
 Usage: This project can be used to view a restaurant webpage and use some of its functionalities.
 
 Future Work: For future work, I would like to get the order page fully functional, and I would also like to add in a
-transaction page, where payments for takeout orders will be processed.
+transaction page, where payments for takeout orders will be processed. Another addition I would like to make is an admin portion of the site, where you add or take away items from the data table with the items and also change the prices on them.
 
 Major and Project Relation: I am an Information Systems major with a minor in Graphic Design. One field that employees
 in this field work in is webpage development and functionality.
