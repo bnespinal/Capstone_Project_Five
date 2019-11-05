@@ -1,7 +1,4 @@
-Description/Purpose: For this project, I have continued work on an HTML project, creating a restaurant webpage, 
-and made it into a functioning webpage with access to data tables created in phpmyadmin. Among its functionality,
-users of this webpage are able to register as a user and log into the site to be able to have access to additional
-pages and functions only logged in users can see.
+Description/Purpose: For this project, I have continued work on my first project for this course. I went back and added some of the future additions that I listed in the "Future Work" section for the original project. I added in email verification for registration and an order page. The order page is not yet fully functional. There are some issues in the works with it. In addition to those two items, I also added in a contact page for registered users. There, they can send a message to the owners of the resaurant. Any message sent from that page goes to a data table, and a email notification will inform you that the message was successful. I also added in email notification for reviews being inputted. To do notifications for the review and contact pages, I had to some code to the log-in function so that the variable "$_SESSION['email]'"_ was created.
 
 Dependencies: This project depends on data tables created in phpmyadmin, and the ccuresearch server.
 
