@@ -13,7 +13,7 @@ checkLogin();
         </div>
         <div class="main">
 <?php
-echo "<h3 align='center'><a href='order.php'>Continue Shopping?</a></h3>";
+echo "<h3 align='center'><a href='order.php'>Continue with Order?</a></h3>";
 if($_SERVER['REQUEST_METHOD'] == "POST"){
     $formdata['remove'] = $_POST['remove'];
     $formdata['id'] = $_POST['id'];
@@ -57,8 +57,8 @@ try {
     <table align="center">
     <?php
     foreach ($user_order as $item) {
-        $ctotal += $item['price'] * $item['quantity'];
         $food_total = $item['price'] * $item['quantity'];
+        $ctotal += $item['price'] * $item['quantity'];
         ?>
                     <tr>
                         <td><?php echo $item['food']; ?></td>
@@ -72,7 +72,6 @@ try {
                             {
                                 echo $item['quantity'];
                             }
-
                             ?>"/></td>
                         <td><label for="remove">Remove</label></td>
                         <td><select name="remove" id="remove">
