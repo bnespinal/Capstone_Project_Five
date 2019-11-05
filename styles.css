@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    min-height: 100%;
+    color: black;
+    font-size: 20px;
+}
+
+/* Header/logo Title */
+header {
+    background-color: #ded2da;
+    padding: 5px;
+    border-bottom: 5px solid #a0969c;
+    align-content: center;
+}
+footer {
+    background-color: #ded2da;
+    padding: 5px;
+    border-top: 5px solid #a0969c;
+    text-align: center;
+    align-content: center;
+}
+ul {
+    list-style-type: circle;
+}
+
+li {
+    display: block;
+    padding-bottom: 5px;
+    padding-right: 10px;
+}
+
+nav li {
+    display: inline;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav a {
+    padding: 5px;
+}
+
+nav a:link {
+    color: #E6FFE1;
+    background-color: #9099a2;
+    text-decoration: none;
+}
+nav a:visited {
+    color: #E6FFE1;
+    background-color: #9099a2;
+    text-decoration: none;
+    text-decoration-color: #E6FFE1;
+}
+nav a:hover {
+    color: #333333;
+    background-color: #96858F;
+}
+nav a:active {
+    color: #E6FFE1;
+    background-color: #333333;
+}
+#nav {
+    background-color: #333333;
+    padding: 14px 20px;
+}
+
+nav a{
+    color: white;
+
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Column container */
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+    -ms-flex: 15%; /* IE10 */
+    flex: 15%;
+    background-color: #ded2da;
+    padding: 20px;
+}
+
+/* Main column */
+
+.main {
+    -ms-flex: 60%; /* IE10 */
+    flex: 60%;
+    background-color: #96858F;
+    padding: 20px;
+    min-height: 722px;
+
+}
+.centerImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}/*centering images*/
+.dish {border-style: dashed;
+    border-color: teal;
+    border-width: 2px;
+    Background-color: #ded2da;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 12px;
+    text-align: center;
+}
+.dishText{color: black;
+}
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
+table{
+    border: solid 1pt black;
+    border-collapse: collapse;
+    alignment: center;
+
+}
+table.center {
+    margin-left:auto;
+    margin-right:auto;
+}
+td, th{
+    border: solid 1pt black;
+}
+tbody tr:nth-child(odd){
+    background-color: gray;
+}
+
+h5{
+    text-align: center;
+    color: #1f2123;
+}
+
+
+hr {color: #DEA82A;
+}
+#statement {text-align: center;
+    color: black;
+}
+.centerImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+h1, h2 {background-color: #ded2da;
+    text-align: center;
+    color: #1f2123;
+}
+h3 {
+    text-align: center;
+    color: #1f2123;
+}
