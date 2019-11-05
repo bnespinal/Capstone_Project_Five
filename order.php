@@ -7,7 +7,6 @@
  */
 $pagename = "Order Out";
 require_once 'header.inc.php';
-
 ?>
 <div class="row">
     <div class="side">
@@ -17,13 +16,11 @@ require_once 'header.inc.php';
 checkLogin();
 $showform = 1;
 if($_SERVER['REQUEST_METHOD']== "POST"){
-
     $formdata['quantity'] = $_POST['quantity'];
     $formdata['price'] = $_POST['price'];
     $formdata['id'] = $_POST['id'];
     $formdata['food'] = $_POST['food'];
     try {
-
         $sql = "SELECT * FROM cart WHERE (id =:id AND user_id =:user_id)";
         $stmt = $pdo->prepare($sql);
         $stmt->bindValue(':id', $formdata['id']);
@@ -36,14 +33,16 @@ if($_SERVER['REQUEST_METHOD']== "POST"){
     }
     if($count>0){
         try{
-            $sql = "SELECT quantity FROM cart WHERE id =:food_id";
+            $sql = "SELECT quantity FROM cart 
+                   WHERE id =:food_id";
             $stmt= $pdo->prepare($sql);
             $stmt->bindValue(':food_id', $formdata['id']);
             $stmt->execute();
             $result = $stmt->fetch();
             $adjust_quantity = $result['quantity'] + $formdata['quantity'];
 
-            $newsql = "UPDATE cart SET quantity =:quantity WHERE id =:id";
+            $newsql = "UPDATE cart SET quantity =:quantity 
+                      WHERE id =:id";
             $newstmt = $pdo->prepare($newsql);
             $newstmt->bindValue(':quantity', $adjust_quantity);
             $newstmt->bindValue(':id', $formdata['id']);
@@ -66,7 +65,6 @@ if($_SERVER['REQUEST_METHOD']== "POST"){
             $stmt->bindValue(":quantity", $formdata['quantity']);
             $stmt->execute();
             header("Location: cart.php");
-
         } catch (PDOException $e) {
             die($e->getMessage());
         }
